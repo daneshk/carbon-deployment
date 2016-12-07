@@ -17,6 +17,9 @@
 */
 package org.wso2.carbon.deployment.engine.config;
 
+import org.wso2.carbon.kernel.annotations.Configuration;
+import org.wso2.carbon.kernel.annotations.Element;
+
 import java.util.Optional;
 import java.util.Properties;
 
@@ -25,6 +28,7 @@ import java.util.Properties;
  *
  * @since 5.1.0
  */
+@Configuration(description = "deployment notification configuration")
 public class DeploymentNotifierConfig {
 
     private boolean jmsPublishingEnabled = false;
@@ -43,6 +47,7 @@ public class DeploymentNotifierConfig {
 
     private String connectionFactoryJNDIName = "TopicConnectionFactory";
 
+    @Element(description = "key: value")
     private Properties staticMessageContent = new Properties();
 
     public boolean isJmsPublishingEnabled() {

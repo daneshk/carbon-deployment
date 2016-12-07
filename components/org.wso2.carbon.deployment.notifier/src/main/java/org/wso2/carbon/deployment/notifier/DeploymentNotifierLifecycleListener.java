@@ -20,7 +20,6 @@ package org.wso2.carbon.deployment.notifier;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.wso2.carbon.deployment.engine.Artifact;
-import org.wso2.carbon.deployment.engine.DeploymentConfigurationProvider;
 import org.wso2.carbon.deployment.engine.LifecycleEvent;
 import org.wso2.carbon.deployment.engine.LifecycleListener;
 import org.wso2.carbon.deployment.engine.config.DeploymentNotifierConfig;

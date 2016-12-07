@@ -37,7 +37,6 @@ import org.wso2.carbon.deployment.notifier.deployers.FaultyDeployer2;
 import org.wso2.carbon.deployment.notifier.internal.DataHolder;
 import org.wso2.carbon.deployment.notifier.listeners.CustomLifecycleListener;
 import org.wso2.carbon.kernel.CarbonRuntime;
-import org.wso2.carbon.kernel.internal.config.YAMLBasedConfigProvider;
 import org.wso2.carbon.kernel.internal.context.CarbonRuntimeFactory;
 
 import java.io.File;
@@ -91,7 +90,7 @@ public class DeploymentEngineTest extends BaseTest {
 
         System.setProperty(org.wso2.carbon.kernel.Constants.CARBON_HOME, getTestResourceFile("yaml").getAbsolutePath());
 
-        CarbonRuntime carbonRuntime = CarbonRuntimeFactory.createCarbonRuntime(new YAMLBasedConfigProvider());
+        CarbonRuntime carbonRuntime = CarbonRuntimeFactory.createCarbonRuntime(new TestConfigurationProvider());
         DataHolder.getInstance().setCarbonRuntime(carbonRuntime);
 
         //start a test message broker

@@ -16,6 +16,7 @@
 package org.wso2.carbon.deployment.notifier.internal;
 
 import org.wso2.carbon.kernel.CarbonRuntime;
+import org.wso2.carbon.kernel.configprovider.ConfigProvider;
 
 /**
  * Deployment notifier DataHolder.
@@ -26,6 +27,8 @@ public class DataHolder {
     private static DataHolder instance = new DataHolder();
 
     private CarbonRuntime carbonRuntime;
+
+    private ConfigProvider configProvider;
 
     public static DataHolder getInstance() {
         return instance;
@@ -49,5 +52,13 @@ public class DataHolder {
      */
     public void setCarbonRuntime(CarbonRuntime carbonRuntime) {
         this.carbonRuntime = carbonRuntime;
+    }
+
+    public ConfigProvider getConfigProvider() {
+        return configProvider;
+    }
+
+    public void setConfigProvider(ConfigProvider configProvider) {
+        this.configProvider = configProvider;
     }
 }

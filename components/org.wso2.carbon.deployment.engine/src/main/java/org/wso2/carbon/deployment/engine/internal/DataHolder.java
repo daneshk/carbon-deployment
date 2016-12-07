@@ -17,6 +17,7 @@ package org.wso2.carbon.deployment.engine.internal;
 
 import org.osgi.framework.BundleContext;
 import org.wso2.carbon.kernel.CarbonRuntime;
+import org.wso2.carbon.kernel.configprovider.ConfigProvider;
 
 /**
  * Carbon kernel DataHolder.
@@ -28,6 +29,8 @@ public class DataHolder {
     private BundleContext bundleContext;
 
     private CarbonRuntime carbonRuntime;
+
+    private ConfigProvider configProvider;
 
     public static DataHolder getInstance() {
         return instance;
@@ -59,5 +62,13 @@ public class DataHolder {
      */
     public void setCarbonRuntime(CarbonRuntime carbonRuntime) {
         this.carbonRuntime = carbonRuntime;
+    }
+
+    public ConfigProvider getConfigProvider() {
+        return configProvider;
+    }
+
+    public void setConfigProvider(ConfigProvider configProvider) {
+        this.configProvider = configProvider;
     }
 }

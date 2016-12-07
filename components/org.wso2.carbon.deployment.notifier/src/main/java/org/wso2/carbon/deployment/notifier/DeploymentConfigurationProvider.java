@@ -15,12 +15,12 @@
 *  specific language governing permissions and limitations
 *  under the License.
 */
-package org.wso2.carbon.deployment.engine;
+package org.wso2.carbon.deployment.notifier;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.wso2.carbon.deployment.engine.config.DeploymentConfiguration;
-import org.wso2.carbon.deployment.engine.internal.DataHolder;
+import org.wso2.carbon.deployment.notifier.internal.DataHolder;
 import org.wso2.carbon.kernel.configprovider.CarbonConfigurationException;
 //import org.wso2.carbon.kernel.utils.Utils;
 //import org.yaml.snakeyaml.Yaml;
